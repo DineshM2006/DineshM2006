@@ -1,0 +1,58 @@
+<svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title   { font-family: 'Segoe UI', Verdana, Arial, sans-serif; font-weight: 800; }
+      .tagline { font-family: Consolas, 'Courier New', monospace; font-weight: 500; }
+    </style>
+
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2027"/>
+      <stop offset="50%" stop-color="#2C5364"/>
+      <stop offset="100%" stop-color="#00F7FF"/>
+    </linearGradient>
+
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F7FF" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0.30"/>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#B9FBFF"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <radialGradient id="dot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00F7FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00F7FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="280" fill="url(#bg)"/>
+
+  <!-- soft floating glow dots -->
+  <circle cx="120" cy="60" r="70" fill="url(#dot)"/>
+  <circle cx="1080" cy="90" r="90" fill="url(#dot)"/>
+  <circle cx="950" cy="230" r="50" fill="url(#dot)"/>
+
+  <!-- layered wave shapes -->
+  <path d="M0,220 C200,260 400,180 600,210 C800,240 1000,170 1200,200 L1200,280 L0,280 Z" fill="url(#wave1)"/>
+  <path d="M0,240 C220,270 420,200 620,230 C820,260 1020,190 1200,220 L1200,280 L0,280 Z" fill="#0D1117" fill-opacity="0.55"/>
+
+  <text x="600" y="120" class="title" font-size="72" fill="url(#textGrad)" text-anchor="middle"
+        letter-spacing="4" filter="url(#glow)">DINESH M</text>
+
+  <text x="600" y="166" class="tagline" font-size="22" fill="#00F7FF" text-anchor="middle">
+    AI &amp; Data Science Engineer · ML Builder · Storyteller
+  </text>
+
+  <!-- thin accent rule under tagline -->
+  <rect x="450" y="188" width="300" height="2.5" rx="1.25" fill="#00F7FF" opacity="0.7"/>
+</svg>
